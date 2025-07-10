@@ -1,0 +1,27 @@
+# Node.js dependencies
+# -------------------
+node_modules/
+package-lock.json
+
+# Build output
+# ------------
+/css/style.css
+
+# Editor directories and files
+# ----------------------------
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Log files
+# ---------
+npm-debug.log*
+*.log
+
+# OS-generated files
+# ------------------
+.DS_Store
+Thumbs.db

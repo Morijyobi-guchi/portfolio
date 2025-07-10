@@ -6,7 +6,6 @@
   <title>ポートフォリオサイト</title>
   <link rel="icon" type="image/png" href="image/favicon.png" />
   <link rel="apple-touch-icon" type="image/png" href="image/favicon.png" />
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -16,13 +15,13 @@
 </head>
 <body class="antialiased">
 
-<nav class="bg-white/90 backdrop-blur-lg shadow-md fixed w-full z-50 top-0 border-b border-gray-200">
-  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+<nav class="fixed top-0 z-50 w-full border-b border-gray-200 shadow-md bg-white/90 backdrop-blur-lg">
+  <div class="container flex items-center justify-between px-6 py-4 mx-auto">
     <a class="text-2xl font-bold text-[var(--primary-color)] flex items-center" href="#hero">
       <svg id="nav-icon" class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
       <span>MyPortfolio.</span>
     </a>
-    <div class="hidden md:flex space-x-6 text-sm font-medium">
+    <div class="hidden space-x-6 text-sm font-medium md:flex">
       <a class="nav-link text-gray-700 hover:text-[var(--primary-color)]" href="#hero">トップ</a>
       <a class="nav-link text-gray-700 hover:text-[var(--primary-color)]" href="#portfolio">制作実績</a>
       <a class="nav-link text-gray-700 hover:text-[var(--primary-color)]" href="#about">私について</a>
@@ -34,7 +33,7 @@
 
 <main>
   <section class="hero-section" id="hero">
-    <div class="relative z-10 text-center p-8 max-w-3xl mx-auto">
+    <div class="relative z-10 max-w-3xl p-8 mx-auto text-center">
       <div id="logo-container">
         <div class="atom-nucleus"></div>
         <div class="atom-orbital"></div>
@@ -44,22 +43,22 @@
       <h1 id="hero-title" class="text-6xl md:text-7xl font-bold mb-6 leading-tight text-[var(--primary-color)]">
         向口 裕真
       </h1>
-      <p id="hero-subtitle" class="text-xl md:text-2xl mb-10 text-gray-300">テクノロジーで課題解決に挑む、粘り強いエンジニア</p>
+      <p id="hero-subtitle" class="mb-10 text-xl text-gray-300 md:text-2xl">テクノロジーで課題解決に挑む、粘り強いエンジニア</p>
       <div class="space-x-4">
         <a class="btn bg-transparent border-2 border-[var(--primary-color)] text-[var(--primary-color)] hover:bg-[var(--primary-color)] hover:text-[var(--secondary-color)] font-semibold py-3 px-8 rounded-full shadow-lg inline-flex items-center" href="https://github.com/Morijyobi-guchi" target="_blank" rel="noopener noreferrer">
-          <span class="material-icons-outlined mr-2">link</span> GitHub
+          <span class="mr-2 material-icons-outlined">link</span> GitHub
         </a>
         <a class="btn bg-transparent border-2 border-[var(--primary-color)] text-[var(--primary-color)] hover:bg-[var(--primary-color)] hover:text-[var(--secondary-color)] font-semibold py-3 px-8 rounded-full shadow-lg inline-flex items-center" href="https://x.com/SgVb7P/with_replies" target="_blank">
-          <span class="material-icons-outlined mr-2">link</span> SNS
+          <span class="mr-2 material-icons-outlined">link</span> SNS
         </a>
       </div>
     </div>
   </section>
 
   <section class="py-20 md:py-28" id="portfolio">
-    <div class="container mx-auto px-6">
-      <a href="#portfolio"><h2 class="section-title text-gray-900">制作実績</h2></a>
-      <div class="max-w-9xl mx-auto relative">
+    <div class="container px-6 mx-auto">
+      <a href="#portfolio"><h2 class="text-gray-900 section-title">制作実績</h2></a>
+      <div class="relative mx-auto max-w-9xl">
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
 
@@ -70,10 +69,10 @@
                   data-title="チーム開発：校内物品交換・譲渡システム (企画/設計)"
                   data-description="学生が抱える「不用品の処分問題」と「交流の希薄化」という2つの課題を解決するため、企画から設計、開発までを一貫して手掛けるP2Pプラットフォームです。単なる交換の場に留まらず、ハッシュタグによる『偶然の出会い』を創出し、新たなコミュニティ形成を促進することを目的としています。"
                   
-                  data-points-html="&lt;ul class='list-disc list-inside text-gray-600 space-y-2'&gt;&lt;li&gt;&lt;strong class='text-sky-600'&gt;【設計と思考力】&lt;/strong&gt;システムの根幹である、ハッシュタグを用いた非同期マッチング機能のアルゴリズムを考案。計算量の増大を抑制しつつ、高いマッチング精度を実現するためのテーブル構造を自ら設計・提案しました。&lt;/li&gt;&lt;li&gt;&lt;strong class='text-sky-600'&gt;【文書化と計画性】&lt;/strong&gt;26のテーブルから成る複雑なDB構造を定義したER図や、全21画面の仕様を網羅した外部設計書を作成。チーム開発の基盤となるドキュメントを整備し、円滑なプロジェクト進行に貢献しました。&lt;/li&gt;&lt;li&gt;&lt;strong class='text-sky-600'&gt;【技術と実装力】&lt;/strong&gt;PHPフレームワークLaravelを採用し、Eloquent ORMの適切なリレーション設定など、保守性と拡張性を考慮した実装を行いました。&lt;/li&gt;&lt;/ul&gt;"
+                  data-points-html="&lt;ul class='space-y-2 text-gray-600 list-disc list-inside'&gt;&lt;li&gt;&lt;strong class='text-sky-600'&gt;【設計と思考力】&lt;/strong&gt;システムの根幹である、ハッシュタグを用いた非同期マッチング機能のアルゴリズムを考案。計算量の増大を抑制しつつ、高いマッチング精度を実現するためのテーブル構造を自ら設計・提案しました。&lt;/li&gt;&lt;li&gt;&lt;strong class='text-sky-600'&gt;【文書化と計画性】&lt;/strong&gt;26のテーブルから成る複雑なDB構造を定義したER図や、全21画面の仕様を網羅した外部設計書を作成。チーム開発の基盤となるドキュメントを整備し、円滑なプロジェクト進行に貢献しました。&lt;/li&gt;&lt;li&gt;&lt;strong class='text-sky-600'&gt;【技術と実装力】&lt;/strong&gt;PHPフレームワークLaravelを採用&lt;/li&gt;&lt;/ul&gt;"
                   
                   data-tags-html="<span class='tech-tag'>Laravel</span><span class='tech-tag'>PHP</span><span class='tech-tag'>MySQL</span><span class='tech-tag'>Tailwind CSS</span><span class='tech-tag'>Vite</span><span class='tech-tag'>Git</span><span class='tech-tag'>DB設計</span>"
-                  data-links-html="<a class='btn bg-[var(--primary-color)] hover:bg-sky-400 text-white font-semibold py-3 px-6 rounded-lg inline-flex items-center text-sm w-48 justify-center' href='https://github.com/Morijyobi-guchi/trade-app' target='_blank' rel='noopener noreferrer'><span class='material-icons-outlined mr-2'>code</span> GitHub</a>"
+                  data-links-html="<a class='btn bg-[var(--primary-color)] hover:bg-sky-400 text-white font-semibold py-3 px-6 rounded-lg inline-flex items-center text-sm w-48 justify-center' href='https://github.com/Morijyobi-guchi/trade-app' target='_blank' rel='noopener noreferrer'><span class='mr-2 material-icons-outlined'>code</span> GitHub</a>"
               />
             </div>
                                <!-- data-image-urls="sns.png, sns2.png, sns3.png,sns4.png,sns5.png" -->
@@ -85,26 +84,26 @@
 
                    data-title="個人開発：SNSアプリケーション"
                    data-description="UI設計からデータベース構築、そしてセキュアなバックエンド機能まで、SNSに求められる機能をゼロから開発したPython製のデスクトップアプリケーションです。オブジェクト指向に基づいたクラス設計により、高い拡張性と保守性を実現しています。"
-                   data-points-html="<ul class='list-disc list-inside text-gray-600 space-y-3'>
+                   data-points-html="<ul class='space-y-3 text-gray-600 list-disc list-inside'>
                                       <li><b>堅牢なユーザー認証・セキュリティ:</b>
-                                          <ul class='list-disc list-inside ml-4 mt-1 text-sm'>
+                                          <ul class='mt-1 ml-4 text-sm list-disc list-inside'>
                                               <li><b>bcrypt</b>による安全なパスワードハッシュ化と検証機能を実装。</li>
                                               <li><b>SMTP</b>を利用したメール送信機能を統合し、メール認証によるパスワードリセットフローを確立。</li>
                                           </ul>
                                       </li>
                                       <li><b>豊富なSNSコア機能:</b>
-                                          <ul class='list-disc list-inside ml-4 mt-1 text-sm'>
+                                          <ul class='mt-1 ml-4 text-sm list-disc list-inside'>
                                               <li>投稿、いいね、コメント、フォロー/アンフォローといった基本的なSNS機能を網羅。</li>
                                               <li>ユーザー検索機能や、フォロワー/フォロー数を表示する詳細なプロフィール画面を実装。</li>
                                           </ul>
                                       </li>
                                       <li><b>通知システム:</b>
-                                          <ul class='list-disc list-inside ml-4 mt-1 text-sm'>
+                                          <ul class='mt-1 ml-4 text-sm list-disc list-inside'>
                                               <li>新しいフォロワーが追加された際に、ユーザーにメールで通知する機能を実装。</li>
                                           </ul>
                                       </li>
                                       <li><b>優れたソフトウェア設計:</b>
-                                          <ul class='list-disc list-inside ml-4 mt-1 text-sm'>
+                                          <ul class='mt-1 ml-4 text-sm list-disc list-inside'>
                                               <li>View（画面）、Model（データ）、Utils（共通処理）を分離したクリーンなアーキテクチャを採用。</li>
                                               <li>アプリケーション全体でセッション情報を管理するSessionManagerを導入。</li>
                                               <li>グローバルな例外ハンドラを設定し、予期せぬエラー発生時にもアプリケーションがクラッシュしない堅牢性を確保。</li>
@@ -112,7 +111,7 @@
                                       </li>
                                     </ul>"
                    data-tags-html="<span class='tech-tag'>Python</span><span class='tech-tag'>Tkinter</span><span class='tech-tag'>MySQL</span><span class='tech-tag'>bcrypt</span><span class='tech-tag'>SMTP</span><span class='tech-tag'>Git</span>"
-                   data-links-html="<a class='btn bg-[var(--primary-color)] hover:bg-sky-400 text-white font-semibold py-3 px-6 rounded-lg inline-flex items-center text-sm w-48 justify-center' href='https://github.com/Morijyobi-guchi/sns_app' target='_blank' rel='noopener noreferrer'><span class='material-icons-outlined mr-2'>code</span> GitHub</a> <a class='btn bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg inline-flex items-center text-sm w-40 justify-center' href='http://www.youtube.com/watch?v=2U-oGc9tEGY' target='_blank' rel='noopener noreferrer'><svg class='w-5 h-5 mr-2' fill='currentColor' viewBox='0 0 24 24' aria-hidden='true' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M19.802 5.802a2.5 2.5 0 00-1.767-1.768C16.53 3.5 12 3.5 12 3.5s-4.53 0-6.035.534a2.5 2.5 0 00-1.768 1.768C3.5 7.27 3.5 12 3.5 12s0 4.73.7 6.198a2.5 2.5 0 001.768 1.767C7.47 20.5 12 20.5 12 20.5s4.53 0 6.035-.534a2.5 2.5 0 001.768-1.767C20.5 16.73 20.5 12 20.5 12s0-4.73-.698-6.198zM9.545 15.568V8.432L15.818 12 9.545 15.568z' clip-rule='evenodd'></path></svg> デモ動画</a>"
+                   data-links-html="<a class='btn bg-[var(--primary-color)] hover:bg-sky-400 text-white font-semibold py-3 px-6 rounded-lg inline-flex items-center text-sm w-48 justify-center' href='https://github.com/Morijyobi-guchi/sns_app' target='_blank' rel='noopener noreferrer'><span class='mr-2 material-icons-outlined'>code</span> GitHub</a> <a class='inline-flex items-center justify-center w-40 px-6 py-3 text-sm font-semibold text-white bg-red-600 rounded-lg btn hover:bg-red-700' href='http://www.youtube.com/watch?v=2U-oGc9tEGY' target='_blank' rel='noopener noreferrer'><svg class='w-5 h-5 mr-2' fill='currentColor' viewBox='0 0 24 24' aria-hidden='true' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M19.802 5.802a2.5 2.5 0 00-1.767-1.768C16.53 3.5 12 3.5 12 3.5s-4.53 0-6.035.534a2.5 2.5 0 00-1.768 1.768C3.5 7.27 3.5 12 3.5 12s0 4.73.7 6.198a2.5 2.5 0 001.768 1.767C7.47 20.5 12 20.5 12 20.5s4.53 0 6.035-.534a2.5 2.5 0 001.768-1.767C20.5 16.73 20.5 12 20.5 12s0-4.73-.698-6.198zM9.545 15.568V8.432L15.818 12 9.545 15.568z' clip-rule='evenodd'></path></svg> デモ動画</a>"
               />
             </div>
 
@@ -123,9 +122,9 @@
                    data-video-url="https://www.youtube.com/watch?v=FNK4mq2lKmU"
                    data-title="個人開発：ブックマーク管理アプリ"
                    data-description="自身の学習効率を上げる目的で、散らばりがちなWebサイトや記事を一元管理するために企画・開発したアプリケーション。"
-                   data-points-html="<ul class='list-disc list-inside text-gray-600 space-y-1'><li>初めてAWSに触れ、インフラ構築からデプロイまでを自力で完遂した点。</li><li>バックエンド(Flask)とフロントエンド(React)を連携させるAPIの設計と実装。</li></ul>"
+                   data-points-html="<ul class='space-y-1 text-gray-600 list-disc list-inside'><li>初めてAWSに触れ、インフラ構築からデプロイまでを自力で完遂した点。</li><li>バックエンド(Flask)とフロントエンド(React)を連携させるAPIの設計と実装。</li></ul>"
                    data-tags-html="<span class='tech-tag'>React</span><span class='tech-tag'>Python (Flask)</span><span class='tech-tag'>PostgreSQL</span><span class='tech-tag'>AWS</span><span class='tech-tag'>Docker</span>"
-                   data-links-html="<a class='btn bg-[var(--primary-color)] hover:bg-sky-400 text-white font-semibold py-3 px-6 rounded-lg inline-flex items-center text-sm w-40 justify-center' href='https://github.com/Morijyobi-guchi/bookmark_api' target='_blank' rel='noopener noreferrer'><span class='material-icons-outlined mr-2'>code</span> GitHub</a> <a class='btn bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg inline-flex items-center text-sm w-40 justify-center' href='http://www.youtube.com/watch?v=FNK4mq2lKmU' target='_blank' rel='noopener noreferrer'><svg class='w-5 h-5 mr-2' fill='currentColor' viewBox='0 0 24 24' aria-hidden='true' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M19.802 5.802a2.5 2.5 0 00-1.767-1.768C16.53 3.5 12 3.5 12 3.5s-4.53 0-6.035.534a2.5 2.5 0 00-1.768 1.768C3.5 7.27 3.5 12 3.5 12s0 4.73.7 6.198a2.5 2.5 0 001.768 1.767C7.47 20.5 12 20.5 12 20.5s4.53 0 6.035-.534a2.5 2.5 0 001.768-1.767C20.5 16.73 20.5 12 20.5 12s0-4.73-.698-6.198zM9.545 15.568V8.432L15.818 12 9.545 15.568z' clip-rule='evenodd'></path></svg> デモ動画</a>"
+                   data-links-html="<a class='btn bg-[var(--primary-color)] hover:bg-sky-400 text-white font-semibold py-3 px-6 rounded-lg inline-flex items-center text-sm w-40 justify-center' href='https://github.com/Morijyobi-guchi/bookmark_api' target='_blank' rel='noopener noreferrer'><span class='mr-2 material-icons-outlined'>code</span> GitHub</a> <a class='inline-flex items-center justify-center w-40 px-6 py-3 text-sm font-semibold text-white bg-red-600 rounded-lg btn hover:bg-red-700' href='http://www.youtube.com/watch?v=FNK4mq2lKmU' target='_blank' rel='noopener noreferrer'><svg class='w-5 h-5 mr-2' fill='currentColor' viewBox='0 0 24 24' aria-hidden='true' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M19.802 5.802a2.5 2.5 0 00-1.767-1.768C16.53 3.5 12 3.5 12 3.5s-4.53 0-6.035.534a2.5 2.5 0 00-1.768 1.768C3.5 7.27 3.5 12 3.5 12s0 4.73.7 6.198a2.5 2.5 0 001.768 1.767C7.47 20.5 12 20.5 12 20.5s4.53 0 6.035-.534a2.5 2.5 0 001.768-1.767C20.5 16.73 20.5 12 20.5 12s0-4.73-.698-6.198zM9.545 15.568V8.432L15.818 12 9.545 15.568z' clip-rule='evenodd'></path></svg> デモ動画</a>"
               />
             </div>
             <div class="swiper-slide">
@@ -135,28 +134,28 @@
                    data-video-url="https://www.youtube.com/watch?v=L7OecnwtBik"
                    data-title="チーム開発：Gemini API搭載 TCPチャットプログラム"
                    data-description="Pythonの標準ライブラリとGoogleのGemini APIを統合し、AIとの対話機能を実装したGUIチャットアプリケーション。実用的なAIアシスタント機能と、サーバーの堅牢な管理機構を両立させた意欲作です。"
-                   data-points-html="<ul class='list-disc list-inside text-gray-600 space-y-2'>
+                   data-points-html="<ul class='space-y-2 text-gray-600 list-disc list-inside'>
                                       <li><b>Gemini 1.5 FlashによるAI応答機能:</b>
-                                          <ul class='list-disc list-inside ml-4 mt-1 text-sm'>
+                                          <ul class='mt-1 ml-4 text-sm list-disc list-inside'>
                                               <li>環境変数からAPIキーを安全に読み込み、Googleの最新AIモデル(Gemini 1.5 Flash)を初期化。</li>
                                               <li>チャット履歴の一部をコンテキストとしてAIに送信し、文脈を理解した自然な応答を生成。</li>
                                               <li>クライアント側でAI応答のON/OFFを切り替える機能を実装し、ユーザー体験を向上。</li>
                                           </ul>
                                       </li>
                                       <li><b>独創的なサーバー安全停止(Graceful Shutdown)機構:</b>
-                                          <ul class='list-disc list-inside ml-4 mt-1 text-sm'>
+                                          <ul class='mt-1 ml-4 text-sm list-disc list-inside'>
                                               <li>サーバー停止時、全クライアントに通知し、待機中の<code>accept()</code>をダミーソケットで解除する巧妙な設計でハングアップを防止。確実なリソース解放を実現。</li>
                                           </ul>
                                       </li>
                                       <li><b>堅牢なマルチクライアント管理とTCP通信:</b>
-                                          <ul class='list-disc list-inside ml-4 mt-1 text-sm'>
+                                          <ul class='mt-1 ml-4 text-sm list-disc list-inside'>
                                               <li><code>threading</code>による並行処理と、<code>socket.SOCK_STREAM</code>(TCP)による信頼性の高い通信基盤を構築。</li>
                                               <li>予約語を考慮したユーザー名検証や自動リネームなど、細やかな管理機能を実装。</li>
                                           </ul>
                                       </li>
                                     </ul>"
                    data-tags-html="<span class='tech-tag'>Python</span><span class='tech-tag'>Gemini API</span><span class='tech-tag'>Tkinter</span><span class='tech-tag'>Socket</span><span class='tech-tag'>TCP/IP</span><span class='tech-tag'>Threading</span>"
-                   data-links-html="<a class='btn bg-[var(--primary-color)] hover:bg-sky-400 text-white font-semibold py-3 px-6 rounded-lg inline-flex items-center text-sm w-48 justify-center' href='https://github.com/Morijyobi-guchi/ChatProgram' target='_blank' rel='noopener noreferrer'><span class='material-icons-outlined mr-2'>code</span> GitHub</a> <a class='btn bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg inline-flex items-center text-sm w-40 justify-center' href='http://www.youtube.com/watch?v=L7OecnwtBik' target='_blank' rel='noopener noreferrer'><svg class='w-5 h-5 mr-2' fill='currentColor' viewBox='0 0 24 24' aria-hidden='true' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M19.802 5.802a2.5 2.5 0 00-1.767-1.768C16.53 3.5 12 3.5 12 3.5s-4.53 0-6.035.534a2.5 2.5 0 00-1.768 1.768C3.5 7.27 3.5 12 3.5 12s0 4.73.7 6.198a2.5 2.5 0 001.768 1.767C7.47 20.5 12 20.5 12 20.5s4.53 0 6.035-.534a2.5 2.5 0 001.768-1.767C20.5 16.73 20.5 12 20.5 12s0-4.73-.698-6.198zM9.545 15.568V8.432L15.818 12 9.545 15.568z' clip-rule='evenodd'></path></svg> デモ動画</a>"
+                   data-links-html="<a class='btn bg-[var(--primary-color)] hover:bg-sky-400 text-white font-semibold py-3 px-6 rounded-lg inline-flex items-center text-sm w-48 justify-center' href='https://github.com/Morijyobi-guchi/ChatProgram' target='_blank' rel='noopener noreferrer'><span class='mr-2 material-icons-outlined'>code</span> GitHub</a> <a class='inline-flex items-center justify-center w-40 px-6 py-3 text-sm font-semibold text-white bg-red-600 rounded-lg btn hover:bg-red-700' href='http://www.youtube.com/watch?v=L7OecnwtBik' target='_blank' rel='noopener noreferrer'><svg class='w-5 h-5 mr-2' fill='currentColor' viewBox='0 0 24 24' aria-hidden='true' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M19.802 5.802a2.5 2.5 0 00-1.767-1.768C16.53 3.5 12 3.5 12 3.5s-4.53 0-6.035.534a2.5 2.5 0 00-1.768 1.768C3.5 7.27 3.5 12 3.5 12s0 4.73.7 6.198a2.5 2.5 0 001.768 1.767C7.47 20.5 12 20.5 12 20.5s4.53 0 6.035-.534a2.5 2.5 0 001.768-1.767C20.5 16.73 20.5 12 20.5 12s0-4.73-.698-6.198zM9.545 15.568V8.432L15.818 12 9.545 15.568z' clip-rule='evenodd'></path></svg> デモ動画</a>"
               />
             </div>
 
@@ -170,45 +169,45 @@
   </section>
 
   <section class="py-20 md:py-28" id="about">
-    <div class="container mx-auto px-6">
-      <a href="#about"><h2 class="section-title text-gray-900">私について</h2></a>
-      <div class="max-w-3xl mx-auto text-gray-700 leading-relaxed text-lg space-y-6 text-center md:text-left">
+    <div class="container px-6 mx-auto">
+      <a href="#about"><h2 class="text-gray-900 section-title">私について</h2></a>
+      <div class="max-w-3xl mx-auto space-y-6 text-lg leading-relaxed text-center text-gray-700 md:text-left">
         <p>はじめまして、向口裕真と申します。「ITの力で、人の課題を解決したい」という強い思いで、エンジニアの道を志しました。</p>
         <p>私の強みは、目標達成のためならどんな壁にも食らいつく「粘り強さ」です。高校時代に2度の挫折を経験し、一度は社会から孤立しました。しかし、その時間があったからこそ自分が本当にやりたいことと向き合うことができ、高卒認定試験を経て、IT専門学校の門を叩きました。この経験は、私の原点です。</p>
         <p>在学中は、Webアプリケーション開発に没頭しました。学年・学科の違う先輩方とのチーム開発では、要件定義から実装までを担当。個人開発では、AWSへのデプロイまでを一人でやり遂げました。</p>
-        <p>私がReactやNext.jsといった技術に惹かれるのは、それらがユーザーに最高の体験を提供し、課題を解決するための強力なツールだからです。このポートフォリオサイトも、ReactとTailwind CSSで構築しました。</p>
-        <p class="font-medium text-gray-800">採用担当者の皆様には、私のこの「諦めずにやり遂げる力」と、それを裏付ける技術的な実績にご注目いただければ幸いです。貴社の一員として、新たな挑戦を共にできることを楽しみにしています。</p>
+        <p>このポートフォリオサイトは、採用担当者の皆様に私の想いと実績を伝えるため、HTMLとCSS（Tailwind CSS）でシンプルながらも想いを込めて構築しました。</p>
+        <p class="font-medium text-gray-800">私のこの「諦めずにやり遂げる力」と、それを裏付ける技術的な実績にご注目いただければ幸いです。貴社の一員として、新たな挑戦を共にできることを楽しみにしています。</p>
       </div>
     </div>
   </section>
 
   <section class="py-20 md:py-28" id="skills">
-    <div class="container mx-auto px-6">
-      <a href="#skills"><h2 class="section-title text-gray-900">スキルセット</h2></a>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
-        <div class="skill-card"><svg class="skill-icon w-14 h-14" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g fill="none" fill-rule="evenodd"><circle cx="64" cy="64" fill="#61DAFB" r="64"></circle><path d="M63.662 90.498c-13.883 0-26.12-8.38-31.33-20.435l-4.15 2.4-1.222-2.117 12.35-7.13 2.117 1.22-3.44 1.986c4.29 10.68 15.02 18.23 27.24 18.23s22.95-7.55 27.24-18.23l-3.44-1.986 2.117-1.22 12.35 7.13-1.222 2.116-4.15-2.4c-5.21 12.055-17.447 20.435-31.33 20.435zm-31.33-52.996c5.21-12.055 17.447-20.435 31.33-20.435s26.12 8.38 31.33 20.435l4.15-2.4 1.22 2.117-12.35 7.13-2.117-1.22 3.44-1.986c-4.29-10.68-15.02-18.23-27.24-18.23s-22.95 7.55-27.24 18.23l3.44 1.986-2.117 1.22-12.35-7.13 1.22-2.117 4.15 2.4zM64 51.5c-7.456 0-13.5-6.044-13.5-13.5s6.044-13.5 13.5-13.5 13.5 6.044 13.5 13.5-6.044 13.5-13.5 13.5zm0-22c-4.694 0-8.5 3.806-8.5 8.5s3.806 8.5 8.5 8.5 8.5-3.806 8.5-8.5-3.806-8.5-8.5-8.5z" fill="#282C34"></path></g></svg><h4 class="text-xl font-semibold text-gray-800 mb-2">フロントエンド</h4><ul class="text-gray-600 space-y-1 text-sm"><li>React (Hooks, Context)</li><li>Next.js (SSR, SSG)</li><li>TypeScript</li><li>HTML5 / CSS3</li><li>JavaScript (ESNext)</li></ul></div>
-        <div class="skill-card"><span class="material-icons skill-icon">dns</span><h4 class="text-xl font-semibold text-gray-800 mb-2">バックエンド</h4><ul class="text-gray-600 space-y-1 text-sm"><li>Node.js (Express)</li><li>Python (Flask,tkinter)</li><li>PHP基礎</li><li>Java基礎</li></ul></div>
-        <div class="skill-card"><span class="material-icons skill-icon">storage</span><h4 class="text-xl font-semibold text-gray-800 mb-2">データベース</h4><ul class="text-gray-600 space-y-1 text-sm"><li>PostgreSQL</li><li>SQLite</li><li>MySQL</li></ul></div>
-        <div class="skill-card"><span class="material-icons skill-icon">cloud_queue</span><h4 class="text-xl font-semibold text-gray-800 mb-2">クラウド & DevOps</h4><ul class="text-gray-600 space-y-1 text-sm"><li>AWS (EC2,S3,ECS,CloudFront,ECR,RDS)</li><li>Docker</li><li>Git & GitHub</li></ul></div>
-        <div class="skill-card"><span class="material-icons skill-icon">design_services</span><h4 class="text-xl font-semibold text-gray-800 mb-2">その他ツール</h4><ul class="text-gray-600 space-y-1 text-sm"><li>Figma</li><li>Google Drive</li></ul></div>
+    <div class="container px-6 mx-auto">
+      <a href="#skills"><h2 class="text-gray-900 section-title">スキルセット</h2></a>
+      <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+        <div class="skill-card"><svg class="skill-icon w-14 h-14" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g fill="none" fill-rule="evenodd"><circle cx="64" cy="64" fill="#61DAFB" r="64"></circle><path d="M63.662 90.498c-13.883 0-26.12-8.38-31.33-20.435l-4.15 2.4-1.222-2.117 12.35-7.13 2.117 1.22-3.44 1.986c4.29 10.68 15.02 18.23 27.24 18.23s22.95-7.55 27.24-18.23l-3.44-1.986 2.117-1.22 12.35 7.13-1.222 2.116-4.15-2.4c-5.21 12.055-17.447 20.435-31.33 20.435zm-31.33-52.996c5.21-12.055 17.447-20.435 31.33-20.435s26.12 8.38 31.33 20.435l4.15-2.4 1.22 2.117-12.35 7.13-2.117-1.22 3.44-1.986c-4.29-10.68-15.02-18.23-27.24-18.23s-22.95 7.55-27.24 18.23l3.44 1.986-2.117 1.22-12.35-7.13 1.22-2.117 4.15 2.4zM64 51.5c-7.456 0-13.5-6.044-13.5-13.5s6.044-13.5 13.5-13.5 13.5 6.044 13.5 13.5-6.044 13.5-13.5 13.5zm0-22c-4.694 0-8.5 3.806-8.5 8.5s3.806 8.5 8.5 8.5 8.5-3.806 8.5-8.5-3.806-8.5-8.5-8.5z" fill="#282C34"></path></g></svg><h4 class="mb-2 text-xl font-semibold text-gray-800">フロントエンド</h4><ul class="space-y-1 text-sm text-gray-600"><li>React (Hooks, Context)</li><li>Next.js (SSR, SSG)</li><li>TypeScript</li><li>HTML5 / CSS3</li><li>JavaScript (ESNext)</li></ul></div>
+        <div class="skill-card"><span class="material-icons skill-icon">dns</span><h4 class="mb-2 text-xl font-semibold text-gray-800">バックエンド</h4><ul class="space-y-1 text-sm text-gray-600"><li>Node.js (Express)</li><li>Python (Flask,tkinter)</li><li>PHP基礎</li><li>Java基礎</li></ul></div>
+        <div class="skill-card"><span class="material-icons skill-icon">storage</span><h4 class="mb-2 text-xl font-semibold text-gray-800">データベース</h4><ul class="space-y-1 text-sm text-gray-600"><li>PostgreSQL</li><li>SQLite</li><li>MySQL</li></ul></div>
+        <div class="skill-card"><span class="material-icons skill-icon">cloud_queue</span><h4 class="mb-2 text-xl font-semibold text-gray-800">クラウド & DevOps</h4><ul class="space-y-1 text-sm text-gray-600"><li>AWS (EC2,S3,ECS,CloudFront,ECR,RDS)</li><li>Docker</li><li>Git & GitHub</li></ul></div>
+        <div class="skill-card"><span class="material-icons skill-icon">design_services</span><h4 class="mb-2 text-xl font-semibold text-gray-800">その他ツール</h4><ul class="space-y-1 text-sm text-gray-600"><li>Figma</li><li>Google Drive</li></ul></div>
       </div>
     </div>
   </section>
 
   <section class="py-20 md:py-28" id="contact">
-    <div class="container mx-auto px-6">
+    <div class="container px-6 mx-auto">
       <a href="#contact"><h2 class="section-title">お問い合わせ</h2></a>
       <div class="max-w-lg mx-auto text-center">
-        <p class="text-gray-300 text-lg mb-10 leading-relaxed">お気軽にご連絡ください。</p>
-        <div class="mb-10"><a class="text-[var(--primary-color)] hover:text-sky-300 text-xl font-medium inline-flex items-center group transition-colors duration-300" href="mailto:y.mukaiguchi.sys24@morijyobi.ac.jp"><span class="material-icons-outlined mr-2 transition-transform duration-300 group-hover:scale-150">email</span> y.mukaiguchi.sys24@morijyobi.ac.jp</a></div>
+        <p class="mb-10 text-lg leading-relaxed text-gray-300">お気軽にご連絡ください。</p>
+        <div class="mb-10"><a class="text-[var(--primary-color)] hover:text-sky-300 text-xl font-medium inline-flex items-center group transition-colors duration-300" href="mailto:y.mukaiguchi.sys24@morijyobi.ac.jp"><span class="mr-2 transition-transform duration-300 material-icons-outlined group-hover:scale-150">email</span> y.mukaiguchi.sys24@morijyobi.ac.jp</a></div>
         <div class="flex justify-center space-x-8"><a class="contact-icon text-gray-400 hover:text-[var(--primary-color)] group transition-colors duration-300" href="https://github.com/Morijyobi-guchi" target="_blank" rel="noopener noreferrer"><span class="sr-only">GitHub</span><svg aria-hidden="true" class="w-10 h-10 transition-transform duration-300 group-hover:scale-125" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.074 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path></svg></a></div>
       </div>
     </div>
   </section>
 </main>
-<a href="#hero" id="page-top-btn" class="fixed bottom-8 right-8 w-24 h-24 flex items-center justify-center opacity-0 translate-y-4 transition-all duration-500 ease-out group">
+<a href="#hero" id="page-top-btn" class="fixed flex items-center justify-center w-24 h-24 transition-all duration-500 ease-out translate-y-4 opacity-0 bottom-8 right-8 group">
   
-  <svg viewBox="0 0 100 100" class="w-full h-full absolute top-0 left-0 animate-spin-slow">
+  <svg viewBox="0 0 100 100" class="absolute top-0 left-0 w-full h-full animate-spin-slow">
     <path id="circlePath" fill="none" stroke="none" d="M 50, 50 m -40, 0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0"/>
     <text>
       <textPath href="#circlePath" class="text-xs font-bold tracking-widest" fill="var(--primary-color)" textLength="251" lengthAdjust="spacingAndGlyphs">
@@ -233,10 +232,10 @@
       </div>
     </div>
     <div class="p-8">
-      <h3 id="modal-title" class="section-subtitle text-center"></h3>
-      <p id="modal-description" class="text-gray-600 mb-6 leading-relaxed"></p>
+      <h3 id="modal-title" class="text-center section-subtitle"></h3>
+      <p id="modal-description" class="mb-6 leading-relaxed text-gray-600"></p>
       <div class="mb-6">
-        <h4 class="font-semibold text-gray-700 mb-2">工夫した点・困難だった点:</h4>
+        <h4 class="mb-2 font-semibold text-gray-700">工夫した点・困難だった点:</h4>
         <div id="modal-points"></div>
       </div>
       <div id="modal-tags" class="flex flex-wrap gap-2 mb-6"></div>
@@ -245,10 +244,11 @@
   </div>
 </div>
 
-<footer class="bg-gray-900 text-gray-400 text-center py-10">
-  <p class="text-sm">Built with React & Tailwind CSS. © 2025 向口 裕真. All rights reserved.</p>
+<footer class="py-10 text-center text-gray-400 bg-gray-900">
+  <p class="text-sm">Built with Tailwind CSS. © 2025 向口 裕真. All rights reserved.</p>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+<script src="js/swiper.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
